@@ -6,11 +6,20 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+<<<<<<< HEAD
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+=======
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+
+>>>>>>> add_css
   </head>
 
   <body>
+    <%= render "layouts/header" %>
+    <%= render "layouts/banner" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
