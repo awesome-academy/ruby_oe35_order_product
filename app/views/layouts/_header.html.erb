@@ -1,0 +1,225 @@
+<!-- top-header -->
+<div class="agile-main-top">
+  <div class="container-fluid">
+    <div class="row main-top-w3l py-2">
+      <div class="col-lg-4 header-most-top">
+        <p class="text-white text-lg-left text-center">
+          <%= t ".best_deal" %>
+          <i class="fas fa-shopping-cart ml-1"></i>
+        </p>
+      </div>
+      <div class="col-lg-8 header-right mt-lg-0 mt-2">
+        <!-- header lists -->
+        <ul>
+          <li class="text-center border-right text-white">
+            <i class="fas fa-phone mr-2"></i>
+            <%= t ".phone_number" %>
+          </li>
+          <li class="text-center border-right text-white">
+            <%= link_to t(".log_in"), "#", class: "text-white",
+							data_target:"#exampleModal", data_toggle: "modal" %>
+          </li>
+          <li class="text-center text-white">
+            <%= link_to t(".register"), "#", class: "text-white",
+							data_target:"#exampleModal", data_toggle: "modal" %>
+          </li>
+          <li class="text-center text-white">
+            <%= link_to t(".en"), locale:"en" %>
+          </li>
+          <li class="text-center text-white">
+            <%= link_to t(".vi"), locale:"vi" %>
+          </li>
+        </ul>
+        <!-- //header lists -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modals -->
+<!-- log in -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center"><%= t ".log_in" %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_for "#" do |f| %>
+          <div class="form-group">
+            <%= f.label :email, t(".email") %>
+          </div>
+          <div class="form-group">
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, t(".password") %>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit t(".log_in"), class: "btn btn-primary" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :remember_me, class: "checkbox inline" do %>
+              <%= f.check_box :remember_me %>
+              <span> <%= t ".remember_me" %> </span>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- register -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><%= t ".register" %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_for "#" do |f| %>
+          <div class="form-group">
+            <%= f.label :email, t(".email") %>
+          </div>
+          <div class="form-group">
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, t(".password") %>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit t(".register"), class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal -->
+<!-- //top-header -->
+<!-- header-bottom-->
+<div class="header-bot">
+  <div class="container">
+    <div class="row header-bot_inner_wthreeinfo_header_mid">
+      <!-- logo -->
+      <div class="col-md-3 logo_agile">
+        <h1 class="text-center">
+          <%= link_to root_path, class: "font-weight-bold font-italic" do %>
+            <%= image_tag "logo2.png" %>
+            <%= t ".electro_store" %>
+          <% end %>
+        </h1>
+      </div>
+      <!-- //logo -->
+      <!-- header-bot -->
+      <div class="col-md-9 header mt-4 mb-md-0 mb-4">
+        <div class="row">
+          <!-- search -->
+          <div class="col-10 agileits_search">
+            <%= form_for "#", class: "form-inline" do |f| %>
+              <%= f.search_field :email, class: "form-control mr-sm-2",
+										placeholder: t(".search") %>
+              <%= f.submit t(".search"), class: "btn my-2 my-sm-0" %>
+            <% end %>
+          </div>
+          <!-- //search -->
+          <!-- cart details -->
+          <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
+            <div class="wthreecartaits wthreecartaits2 cart cart box_1">
+              <form action="#" method="post" class="last">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="display" value="1">
+                <button class="btn w3view-cart" type="submit" name="submit" value="">
+                  <i class="fas fa-cart-arrow-down"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- //cart details -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- shop locator (popup) -->
+<!-- //header-bottom -->
+<!-- navigation -->
+<div class="navbar-inner">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center mr-xl-5">
+          <li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
+            <%= link_to t(".subtitle"), root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+            <%= link_to t(".electronics"), "#", class: "nav-link dropdown-toggle",
+								role: "button", data_toggle: "dropdown", aria_haspopup: "true", aria_expanded: "false" %>
+            <div class="dropdown-menu">
+              <div class="agile_inner_drop_nav_info p-4">
+                <h5 class="mb-3"><%= t ".mobile_computers" %></h5>
+                <div class="row">
+                  <div class="col-sm-6 multi-gd-img">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <%= link_to t(".el_1"), "#" %>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 multi-gd-img">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <%= link_to t(".el_2"), "#" %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+            <%= link_to t(".appliances"), "#",  class: "nav-link dropdown-toggle",
+								role: "button", data_toggle: "dropdown", aria_haspopup: "true", aria_expanded: "false" %>
+            <div class="dropdown-menu">
+              <div class="agile_inner_drop_nav_info p-4">
+                <h5 class="mb-3"><%= t ".tv_appliances_electronics" %></h5>
+                <div class="row">
+                  <div class="col-sm-6 multi-gd-img">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <%= link_to t(".el_1"), "#" %>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6 multi-gd-img">
+                    <ul class="multi-column-dropdown">
+                      <li>
+                        <%= link_to t(".el_2"), "#" %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- //navigation -->

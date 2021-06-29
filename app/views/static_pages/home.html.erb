@@ -1,0 +1,80 @@
+<% provide :title, t(".title") %>
+<!-- top Products -->
+<div class="ads-grid py-sm-5 py-4">
+  <div class="container py-xl-4 py-lg-2">
+    <!-- tittle heading -->
+    <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+      <%= t ".tittle_heading" %>
+    </h3>
+    <!-- //tittle heading -->
+    <div class="row">
+      <!-- product left -->
+      <div class="agileinfo-ads-display col-lg-9">
+        <div class="wrapper">
+          <!-- first section -->
+          <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+            <h3 class="heading-tittle text-center font-italic">
+              <%= t ".new_brand_mobiles" %>
+            </h3>
+            <div class="row">
+              <div class="col-md-4 product-men mt-5">
+                <div class="men-pro-item simpleCart_shelfItem">
+                  <div class="men-thumb-item text-center">
+                    <%= image_tag("m1", atl: "") %>
+                    <div class="men-cart-pro">
+                      <div class="inner-men-cart-pro">
+                        <%= link_to t(".quick_view"), "#", class: "link-product-add-cart" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-info-product text-center border-top mt-4">
+                    <h4 class="pt-1">
+                      <%= link_to t(".product_name"), "#" %>
+                    </h4>
+                    <div class="info-product-price my-2">
+                      <span class="item_price"><%= t ".price" %></span>
+                      <del><%= t ".discount" %></del>
+                    </div>
+                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+                      <%= form_for "#" do |f| %>
+                        <%= f.hidden_field :cmd %>
+                        <%= f.hidden_field :add %>
+                        <%= f.hidden_field :business %>
+                        <%= f.hidden_field :item_name %>
+                        <%= f.hidden_field :amount %>
+                        <%= f.hidden_field :discount_amount %>
+                        <%= f.hidden_field :currency_code %>
+                        <%= f.hidden_field :return %>
+                        <%= f.hidden_field :cancel_return %>
+                        <%= f.submit t(".add_to_cart"), class: "button btn" %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //first section -->
+          <!-- third section -->
+          <div class="product-sec1 product-sec2 px-sm-5 px-3">
+            <div class="row">
+              <h3 class="col-md-4 effect-bg">
+                <%= t ".summer_carnival" %>
+              </h3>
+              <p class="w3l-nut-middle">
+                <%= t ".sale" %>
+              </p>
+              <div class="col-md-8 bg-right-nut">
+                <%= image_tag("image1", alt: "") %>
+              </div>
+            </div>
+          </div>
+          <!-- //third section -->
+        </div>
+      </div>
+      <!-- //product left -->
+    </div>
+  </div>
+</div>
+</div>
+<!-- //top products -->
