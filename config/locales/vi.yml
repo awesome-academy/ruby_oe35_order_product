@@ -1,4 +1,7 @@
 vi:
+  global:
+    success: "Thành công"
+    fail: "Thất bại"
   layouts:
     header:
       subtitle: "Trang chủ"
