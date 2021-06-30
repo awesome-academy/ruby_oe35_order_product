@@ -1,3 +1,9 @@
 static_pages:
   home:
     link_gmail: "https://mail.google.com/"
+model:
+  user:
+    name_length: 20
+    email_length: 50
+    email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+    password_length: 6

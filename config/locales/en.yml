@@ -1,4 +1,7 @@
 en:
+  global:
+    success: "Success"
+    fail: "Fail"
   layouts:
     header:
       subtitle: "Home"
