@@ -9,6 +9,8 @@ en:
       phone_number: "001 234 5678"
       log_in: "Log In"
       register: "Register"
+      log_out: "Log out"
+      profile: "Profile"
       en: "English"
       vi: "Vietnamese"
       email: "Email"
@@ -53,3 +55,6 @@ en:
       add_to_cart: "ADD TO CART"
       summer_carnival: "Summer Carnival"
       sale: "Get Extra 10% Off"
+  login_session:
+    new:
+      form_title: "Log in"

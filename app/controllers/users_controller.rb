@@ -23,12 +23,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit User::USER_ATTRS
   end
-
-  def load_user
-    @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:danger] = t "global.fail"
-    redirect_to root_url
-  end
 end

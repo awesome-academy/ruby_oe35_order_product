@@ -1,6 +1,16 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
 
+  include LoginSessionHelper
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t "global.fail"
+    redirect_to root_url
+  end
+
   private
 
   def set_locale

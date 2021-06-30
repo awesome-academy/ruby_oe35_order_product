@@ -1,112 +1,81 @@
 <!-- top-header -->
-<div class="agile-main-top">
-  <div class="container-fluid">
-    <div class="row main-top-w3l py-2">
-      <div class="col-lg-4 header-most-top">
-        <p class="text-white text-lg-left text-center">
-          <%= t ".best_deal" %>
-          <i class="fas fa-shopping-cart ml-1"></i>
-        </p>
-      </div>
-      <div class="col-lg-8 header-right mt-lg-0 mt-2">
-        <!-- header lists -->
-        <ul>
-          <li class="text-center border-right text-white">
-            <i class="fas fa-phone mr-2"></i>
-            <%= t ".phone_number" %>
-          </li>
-          <li class="text-center border-right text-white">
-            <%= link_to t(".log_in"), "#", class: "text-white",
+<% if logged_in? %>
+  <div class="agile-main-top">
+    <div class="container-fluid">
+      <div class="row main-top-w3l py-2">
+        <div class="col-lg-2 header-most-top">
+          <p class="text-white text-lg-left text-center">
+            <%= t ".best_deal" %>
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </p>
+        </div>
+        <div class="col-lg-10 header-right mt-lg-0 mt-2">
+          <!-- header lists -->
+          <ul>
+            <li class="text-center border-right text-white">
+              <i class="fas fa-phone mr-2"></i>
+              <%= t ".phone_number" %>
+            </li>
+            <li class="text-center border-right text-white">
+              <%= link_to t(".profile"), current_user, class: "text-white",
 							data_target:"#exampleModal", data_toggle: "modal" %>
-          </li>
-          <li class="text-center text-white">
-            <%= link_to t(".register"), signup_path, class: "text-white",
+            </li>
+            <li class="text-center border-right text-white">
+              <%= link_to t(".log_out"), logout_path, method: :delete,
+              class: "text-white", data_target:"#exampleModal",
+              data_toggle: "modal" %>
+            </li>
+            <li class="text-center border-right text-white">
+              <%= link_to t(".en"), locale:"en", class: "text-white" %>
+            </li>
+            <li class="text-center text-white">
+              <%= link_to t(".vi"), locale:"vi" %>
+            </li>
+          </ul>
+          <!-- //header lists -->
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="agile-main-top">
+    <div class="container-fluid">
+      <div class="row main-top-w3l py-2">
+        <div class="col-lg-2 header-most-top">
+          <p class="text-white text-lg-left text-center">
+            <%= t ".best_deal" %>
+            <i class="fas fa-shopping-cart ml-1"></i>
+          </p>
+        </div>
+        <div class="col-lg-10 header-right mt-lg-0 mt-2">
+          <!-- header lists -->
+          <ul>
+            <li class="text-center border-right text-white">
+              <i class="fas fa-phone mr-2"></i>
+              <%= t ".phone_number" %>
+            </li>
+            <li class="text-center border-right text-white">
+              <%= link_to t(".log_in"), login_path, class: "text-white",
 							data_target:"#exampleModal", data_toggle: "modal" %>
-          </li>
-          <li class="text-center text-white">
-            <%= link_to t(".en"), locale:"en" %>
-          </li>
-          <li class="text-center text-white">
-            <%= link_to t(".vi"), locale:"vi" %>
-          </li>
-        </ul>
-        <!-- //header lists -->
+            </li>
+            <li class="text-center text-white border-right">
+              <%= link_to t(".register"), signup_path, class: "text-white",
+							data_target:"#exampleModal", data_toggle: "modal" %>
+            </li>
+            <li class="text-center border-right text-white">
+              <%= link_to t(".en"), locale:"en", class: "text-white", data_target:"#exampleModal",
+              data_toggle: "modal" %>
+            </li>
+            <li class="text-center text-white">
+              <%= link_to t(".vi"), locale:"vi" %>
+            </li>
+          </ul>
+          <!-- //header lists -->
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- modals -->
-<!-- log in -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center"><%= t ".log_in" %></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <%= form_for "#" do |f| %>
-          <div class="form-group">
-            <%= f.label :email, t(".email") %>
-          </div>
-          <div class="form-group">
-            <%= f.email_field :email, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password, t(".password") %>
-          </div>
-          <div class="form-group">
-            <%= f.password_field :password, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.submit t(".log_in"), class: "btn btn-primary" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :remember_me, class: "checkbox inline" do %>
-              <%= f.check_box :remember_me %>
-              <span> <%= t ".remember_me" %> </span>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- register -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title"><%= t ".register" %></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <%= form_for "#" do |f| %>
-          <div class="form-group">
-            <%= f.label :email, t(".email") %>
-          </div>
-          <div class="form-group">
-            <%= f.email_field :email, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password, t(".password") %>
-          </div>
-          <div class="form-group">
-            <%= f.password_field :password, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.submit t(".register"), class: "btn btn-primary" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- //modal -->
+<% end %>
 <!-- //top-header -->
 <!-- header-bottom-->
 <div class="header-bot">
