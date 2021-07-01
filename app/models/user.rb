@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :orders, dependent: :destroy
+
   USER_ATTRS = %i(full_name email password password_confirmation).freeze
 
   before_save :downcase_email
