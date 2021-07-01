@@ -9,6 +9,8 @@ vi:
       phone_number: "001 234 5678"
       log_in: "Đăng nhập"
       register: "Đăng ký"
+      log_out: "Đăng xuất"
+      profile: "Hồ sơ"
       en: "Tiếng Anh"
       vi: "Tiếng Việt"
       email: "Email"
@@ -53,3 +55,6 @@ vi:
       add_to_cart: "THÊM VÀO GIỎ"
       summer_carnival: "Lễ  Hội Mùa Hè"
       sale: "Giảm thêm 10%"
+  login_session:
+    new:
+      form_title: "Đăng nhập"
