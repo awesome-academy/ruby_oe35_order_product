@@ -5,6 +5,11 @@ Rails.application.routes.draw do
     get "/login", to: "login_session#new"
     post "/login", to: "login_session#create"
     delete "/logout", to: "login_session#destroy"
+    resources :products, only: :index
     resources :users
+    namespace :admin do
+      root to: "products#index"
+      resources :products
+    end
   end
 end

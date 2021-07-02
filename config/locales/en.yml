@@ -43,6 +43,18 @@ en:
       newsletter: "Newsletter"
       text: "Free Delivery on your first order!"
       go_btn: "Go"
+    admin:
+      header:
+        home: "Home"
+        contact: "Contact"
+        adminlte: "AdminLTE"
+        user_name: "Name"
+        cat_name: "Category Name"
+        level: "Level 1"
+        dashboard: "Dashboard"
+        chart_number: "150"
+        chart_text_1: "New Orders"
+        chart_text_2: "More info"
   static_pages:
     home:
       title: "Home"
