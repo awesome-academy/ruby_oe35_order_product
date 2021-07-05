@@ -43,6 +43,18 @@ vi:
       newsletter: "Kết nối với chúng tôi"
       text: "Miễn phí vận chuyển đơn hàng đầu tiên!"
       go_btn: "Gửi"
+    admin:
+      header:
+        home: "Trang chủ"
+        contact: "Liên lạc"
+        adminlte: "AdminLTE"
+        user_name: "Tên"
+        cat_name: "Tên danh mục"
+        level: "Level 1"
+        dashboard: "Dashboard"
+        chart_number: "150"
+        chart_text_1: "Đơn hàng mới"
+        chart_text_2: "Chi tiết"
   static_pages:
     home:
       title: "Trang chủ"
