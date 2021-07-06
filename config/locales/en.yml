@@ -70,3 +70,8 @@ en:
   login_session:
     new:
       form_title: "Log in"
+  admin:
+    admin_session:
+      forgot_password: "I forgot my password"
+      warning_text: "You have to log in first"
+      admin_page: "Admin Page"

@@ -70,3 +70,8 @@ vi:
   login_session:
     new:
       form_title: "Đăng nhập"
+  admin:
+    admin_session:
+      forgot_password: "Quên mật khẩu"
+      warning_text: "Bạn phải đăng nhập"
+      admin_page: "Trang Admin"
